@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Clark - Case Studies Content Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+        header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 60px;
+        }
+        header h1 { font-size: 32px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+        header p { color: #888; font-size: 15px; }
+        .case-study {
+            margin-bottom: 80px;
+            padding-bottom: 80px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .case-study:last-child { border-bottom: none; }
+        .cs-number {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        .cs-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0a0a0a;
+            background: #4af;
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #4af;
+            margin: 40px 0 16px;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        p { margin-bottom: 16px; color: #bbb; font-size: 15px; }
+        ul { margin: 12px 0 20px 20px; }
+        li { margin-bottom: 10px; color: #bbb; font-size: 15px; }
+        li strong { color: #fff; }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-grid.single { grid-template-columns: 1fr; }
+        .image-card {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .image-card .caption {
+            padding: 12px 16px;
+            font-size: 12px;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+        .image-card .caption strong { color: #aaa; }
+        .source-tag {
+            display: inline-block;
+            font-size: 10px;
+            background: #1a2a1a;
+            color: #6c6;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-top: 4px;
+        }
+        .copy-block {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .copy-block p:last-child { margin-bottom: 0; }
+        .note {
+            background: #1a1a2a;
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+            font-size: 14px;
+            color: #99a;
+        }
+        .note strong { color: #aaf; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        th {
+            text-align: left;
+            padding: 10px 12px;
+            background: #141414;
+            color: #888;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #222;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #1a1a1a;
+            color: #bbb;
+            vertical-align: top;
+        }
+        td a { color: #4af; text-decoration: none; word-break: break-all; }
+        td a:hover { text-decoration: underline; }
+        .toc {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 48px;
+        }
+        .toc h3 { margin-top: 0; color: #888; }
+        .toc a {
+            color: #4af;
+            text-decoration: none;
+            display: block;
+            padding: 6px 0;
+            font-size: 15px;
+        }
+        .toc a:hover { color: #6cf; }
+        .toc .toc-label { color: #666; font-size: 13px; margin-left: 8px; }
+        @media (max-width: 640px) {
+            .image-grid { grid-template-columns: 1fr; }
+            .container { padding: 16px; }
+            h2 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+    <h1>Case Studies Content Guide</h1>
+    <p>Copy + image recommendations for danielclark.design portfolio</p>
+</header>
+
+<div class="toc">
+    <h3>Contents</h3>
+    <a href="#cs1">01 Agentic Automation <span class="toc-label">Agentforce + Flow</span></a>
+    <a href="#cs2">02 Low Code Automation Platform <span class="toc-label">Flow Builder</span></a>
+    <a href="#cs3">03 Integration-As-A-Service <span class="toc-label">MuleSoft</span></a>
+    <a href="#cs4">04 Watson AI Carbon Design System <span class="toc-label">IBM Watson + Carbon</span></a>
+    <a href="#sourcing">Image Sourcing Guide</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CASE STUDY 1 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="case-study" id="cs1">
+    <div class="cs-number">Case Study 01</div>
+    <div class="cs-label">Agentic Automation</div>
+    <h2>Designing the bridge between AI agents and enterprise automation at scale.</h2>
+
+    <h3>Overview</h3>
+    <div class="copy-block">
+        <p>Agentforce represents Salesforce's most ambitious platform shift &mdash; from tools that humans operate to AI agents that act autonomously. I led the design vision for integrating agentic capabilities into Flow Builder, enabling admins and developers to build, test, and deploy AI agents within the same low-code canvas they already know.</p>
+        <p>The challenge was making autonomous AI behavior feel trustworthy and controllable within an enterprise platform used by millions. We had to answer a fundamental question: how do you give users confidence in something that acts on its own?</p>
+    </div>
+
+    <h3>Problem</h3>
+    <div class="copy-block">
+        <p>Enterprise customers needed AI agents that could reason, plan, and execute multi-step business processes &mdash; but existing automation tools were built for deterministic, human-triggered workflows. There was no way to invoke an agent from a flow, observe its reasoning, or set guardrails on its behavior. Admins felt locked out of the AI conversation.</p>
+    </div>
+
+    <h3>Solution</h3>
+    <div class="copy-block">
+        <p>We designed a unified workspace where agents and flows coexist. Key design decisions included:</p>
+        <ul>
+            <li><strong>Agent invocation as a native Flow element</strong> &mdash; agents can be called mid-flow with the same drag-and-drop simplicity as any other action, making AI accessible to the 52.8M+ platform users</li>
+            <li><strong>Three interchangeable views</strong> &mdash; a doc-style editor for plain-language drafting, a low-code canvas for visual design, and a script view for developer control</li>
+            <li><strong>Real-time simulation with debugging</strong> &mdash; one-click agent testing with transparent reasoning traces so builders can see <em>why</em> an agent made each decision</li>
+            <li><strong>Guardrail configuration</strong> &mdash; visual controls for defining agent boundaries, escalation triggers, and human-in-the-loop checkpoints</li>
+        </ul>
+        <p>This work shipped as part of Agentforce 360, enabling customers to blend deterministic automation with generative AI reasoning inside a single, trusted platform.</p>
+    </div>
+
+    <h3>Recommended Images</h3>
+
+    <div class="image-grid single">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530130226/image-5.png" alt="Invoke Agent action in Flow Builder" loading="lazy">
+            <div class="caption">
+                <strong>Invoke Agent Action</strong> &mdash; Agent invocation element wired into a record-triggered flow, showing the configuration panel
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530131704/image-16.png" alt="Debug panel" loading="lazy">
+            <div class="caption">
+                <strong>Debug Panel</strong> &mdash; Card-based execution traces with filtering and search
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530131535/image-14.png" alt="Orchestration fault path" loading="lazy">
+            <div class="caption">
+                <strong>Fault Paths</strong> &mdash; Recovery flows for when agent steps fail
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530131911/image-17.png" alt="Test configuration" loading="lazy">
+            <div class="caption">
+                <strong>Agent Testing</strong> &mdash; Error path testing configuration for validating agent behavior
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530130341/image-7.png" alt="Async path config" loading="lazy">
+            <div class="caption">
+                <strong>Async Path Configuration</strong> &mdash; Start element with agent async path settings
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="note">
+        <strong>Additional hero image suggestion:</strong> Take a screenshot from your own Salesforce org showing the Agentforce Builder workspace, or contact <code>pr@salesforce.com</code> for high-resolution press imagery.
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CASE STUDY 2 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="case-study" id="cs2">
+    <div class="cs-number">Case Study 02</div>
+    <div class="cs-label">Low Code Automation Platform</div>
+    <h2>Reimagining Salesforce Flow Builder as the automation platform for 52.8M users.</h2>
+
+    <h3>Overview</h3>
+    <div class="copy-block">
+        <p>Flow Builder is the most powerful declarative tool in the Salesforce ecosystem &mdash; and one of the most complex. As Product Architect for Flow &amp; Automation, I led the design evolution of the platform from a process automation tool into a full low-code development environment capable of building reactive applications, orchestrating multi-step business processes, and now invoking AI agents.</p>
+        <p>My focus was making enterprise-grade power accessible without sacrificing the simplicity that makes Flow the admin's most trusted tool.</p>
+    </div>
+
+    <h3>Problem</h3>
+    <div class="copy-block">
+        <p>Flow Builder had grown organically over years, accumulating features without a cohesive architectural vision. The canvas was rigid &mdash; double-click to edit, no responsive previews, limited debugging. Complex flows became unreadable, and the gap between what Flow <em>could</em> do and what users <em>could figure out</em> was widening. Admins building for mobile, service consoles, and field teams had no way to preview their work in context.</p>
+    </div>
+
+    <h3>Solution</h3>
+    <div class="copy-block">
+        <p>I drove a multi-release design strategy that systematically modernized the platform:</p>
+        <ul>
+            <li><strong>Single-click canvas interactions</strong> &mdash; replaced double-click editing with direct manipulation, contextual menus, and sticky zoom for a modern builder experience</li>
+            <li><strong>12-column responsive grid</strong> &mdash; introduced per-component width control and vertical alignment, giving screen flows true layout flexibility without CSS</li>
+            <li><strong>Reactive screen architecture</strong> &mdash; designed the interaction model for screens that respond to user input in real-time, eliminating the need for page refreshes or custom components</li>
+            <li><strong>Resizable debug panel</strong> &mdash; redesigned the debugging experience with card-based execution traces, filtering, search, and clipboard export</li>
+            <li><strong>Screen size preview</strong> &mdash; added in-canvas device simulation so builders can validate responsive layouts before deployment</li>
+            <li><strong>Flow Orchestration fault paths</strong> &mdash; designed recovery flows for when steps fail, moving the platform from "happy path only" to enterprise-grade resilience</li>
+        </ul>
+        <p>These shipped across Winter '25 through Summer '26 releases and collectively transformed Flow Builder from an admin tool into a low-code application platform.</p>
+    </div>
+
+    <h3>Recommended Images</h3>
+
+    <div class="image-grid single">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530125934/image-11.png" alt="New flow creation modal" loading="lazy">
+            <div class="caption">
+                <strong>New Flow Creation Modal</strong> &mdash; Streamlined flow type selection with categories and frequently used templates
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530130007/image-22.png" alt="Single-click element cards" loading="lazy">
+            <div class="caption">
+                <strong>Single-Click Elements</strong> &mdash; Direct manipulation with contextual menus on each card
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530132540/image-101.png" alt="12-column grid layout" loading="lazy">
+            <div class="caption">
+                <strong>12-Column Grid</strong> &mdash; Per-component width control with vertical alignment
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530132503/image-81.png" alt="Reactive screen actions" loading="lazy">
+            <div class="caption">
+                <strong>Reactive Screens</strong> &mdash; Real-time response to user input without page refresh
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530130655/image-9.png" alt="Conditional screen actions" loading="lazy">
+            <div class="caption">
+                <strong>Conditional Execution</strong> &mdash; Fine-grained control over when screen actions fire
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530130053/image-31.png" alt="Resource picker" loading="lazy">
+            <div class="caption">
+                <strong>Expanded Resource Search</strong> &mdash; 10-level deep search through nested data
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530130950/image-111.png" alt="Visual picker with icons" loading="lazy">
+            <div class="caption">
+                <strong>Visual Picker</strong> &mdash; Icon-based selection for better UX in screen flows
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530131622/image-15.png" alt="Flow logging" loading="lazy">
+            <div class="caption">
+                <strong>Flow Logging</strong> &mdash; Enterprise-grade monitoring via Data Cloud integration
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250530131948/image-18.png" alt="Clean XML diff" loading="lazy">
+            <div class="caption">
+                <strong>Clean XML Diffs</strong> &mdash; Removed X/Y noise for source-driven development
+                <br><span class="source-tag">Source: Salesforce Admin Blog (public)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CASE STUDY 3 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="case-study" id="cs3">
+    <div class="cs-number">Case Study 03</div>
+    <div class="cs-label">Integration-As-A-Service</div>
+    <h2>Making API-first integration accessible to every team, not just developers.</h2>
+
+    <h3>Overview</h3>
+    <div class="copy-block">
+        <p>MuleSoft's Anypoint Platform is the industry-leading integration platform &mdash; but its power came at the cost of accessibility. As Product Architect for MuleSoft (2020-2023), I led the design transformation of the integration experience from a developer-only IDE into a platform that business technologists, admins, and citizen integrators could use alongside professional developers.</p>
+        <p>The vision: integration as a service that any team could consume, not a bottleneck owned by IT.</p>
+    </div>
+
+    <h3>Problem</h3>
+    <div class="copy-block">
+        <p>Enterprise integration was trapped in a specialist silo. Building an API or connecting two systems required deep technical knowledge of MuleSoft's Anypoint Studio &mdash; a desktop IDE built for Java developers. Business teams waited months for integrations that developers considered low-priority. Meanwhile, shadow IT grew as teams built fragile point-to-point connections outside the platform.</p>
+        <p>The gap between integration demand and developer capacity was growing 3x faster than headcount.</p>
+    </div>
+
+    <h3>Solution</h3>
+    <div class="copy-block">
+        <p>I designed a layered integration experience that served multiple skill levels from a single platform:</p>
+        <ul>
+            <li><strong>Visual flow designer</strong> &mdash; a drag-and-drop integration builder with pre-built connectors for 400+ enterprise applications, enabling admins to build integrations without writing code</li>
+            <li><strong>API-first architecture patterns</strong> &mdash; established reusable design patterns for system, process, and experience APIs that teams could compose like building blocks</li>
+            <li><strong>Anypoint Exchange redesign</strong> &mdash; transformed the asset marketplace into a discoverable, self-service catalog where teams could find, try, and deploy pre-built integrations</li>
+            <li><strong>Unified monitoring dashboard</strong> &mdash; designed real-time observability across all integrations with clear health indicators, error routing, and performance metrics</li>
+            <li><strong>MuleSoft Composer</strong> &mdash; contributed to the design vision for the no-code integration tool that brought MuleSoft's power to business users through a guided, template-driven experience</li>
+        </ul>
+        <p>This work helped position MuleSoft as the integration backbone for Salesforce's broader platform strategy, connecting CRM, commerce, and AI capabilities across the enterprise.</p>
+    </div>
+
+    <h3>Recommended Images</h3>
+
+    <div class="note">
+        <strong>Image sourcing for MuleSoft:</strong> MuleSoft's website blocks automated access. Recommended sources:
+        <ul style="margin-top:12px;">
+            <li>Take screenshots from <a href="https://docs.mulesoft.com/anypoint-code-builder/start-discover-ui" style="color:#4af">MuleSoft Documentation UI Guide</a></li>
+            <li>David Wells' MuleSoft dashboard work: <a href="https://davidwells.io/work/mulesoft-anypoint-platform-ui" style="color:#4af">davidwells.io/work/mulesoft-anypoint-platform-ui</a></li>
+            <li>Screenshot from <a href="https://www.mulesoft.com/exchange/" style="color:#4af">Anypoint Exchange</a> (publicly accessible)</li>
+            <li>Your own MuleSoft org screenshots from your time as Product Architect</li>
+            <li>MuleSoft blog post screenshots: <a href="https://blogs.mulesoft.com/dev/anypoint-platform-dev/announcing-mule-ion-ipaas/attachment/studio-screenshot/" style="color:#4af">Studio screenshot</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CASE STUDY 4 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="case-study" id="cs4">
+    <div class="cs-number">Case Study 04</div>
+    <div class="cs-label">Watson AI Carbon Design System</div>
+    <h2>Building the design language for enterprise AI at IBM Watson.</h2>
+
+    <h3>Overview</h3>
+    <div class="copy-block">
+        <p>As Sr. Design Manager for Watson at IBM (2016-2018), I led the design team responsible for Watson's analytics and AI experiences. A core part of this work was establishing Watson's visual identity within IBM's Carbon Design System &mdash; creating the patterns, components, and interaction models that would define how millions of users experience AI in the enterprise.</p>
+        <p>This was design at the intersection of data visualization, machine learning, and human trust.</p>
+    </div>
+
+    <h3>Problem</h3>
+    <div class="copy-block">
+        <p>Watson's AI products had grown rapidly through acquisition and independent development, resulting in fragmented user experiences. Each product &mdash; Watson Analytics, Watson Discovery, Watson Assistant &mdash; had its own visual language, interaction patterns, and component libraries. Users moving between Watson products felt like they were using entirely different platforms.</p>
+        <p>Meanwhile, IBM was building Carbon Design System as its enterprise-wide design system, but AI experiences had unique requirements that Carbon's general-purpose components couldn't address &mdash; confidence indicators, model explainability, training feedback loops, and data-dense analytical views.</p>
+    </div>
+
+    <h3>Solution</h3>
+    <div class="copy-block">
+        <p>I led the design effort to create a cohesive Watson experience layer within Carbon:</p>
+        <ul>
+            <li><strong>AI-specific component patterns</strong> &mdash; designed components for confidence scoring, entity recognition highlighting, model training progress, and explainability panels that became standard across Watson products</li>
+            <li><strong>Data visualization system</strong> &mdash; established a consistent charting and dashboard framework built on Carbon's design tokens, using D3-powered visualizations that scaled from summary KPIs to deep analytical exploration</li>
+            <li><strong>Analytics dashboard architecture</strong> &mdash; created a flexible dashboard framework with presentation, analytical, and operational views that product teams could compose for their specific use cases</li>
+            <li><strong>AI transparency patterns</strong> &mdash; pioneered interaction patterns that made AI decision-making visible and understandable, addressing enterprise customers' need for explainable AI before "explainable AI" became an industry standard</li>
+            <li><strong>Cross-product design governance</strong> &mdash; established review processes and shared Figma libraries that unified the Watson design language while giving individual product teams room to innovate</li>
+        </ul>
+        <p>This work helped establish Carbon as the foundation for IBM's enterprise AI experiences and influenced the later development of Carbon for AI &mdash; IBM's dedicated framework for identifying and explaining AI-generated content across all products.</p>
+    </div>
+
+    <h3>Recommended Images</h3>
+
+    <div class="note">
+        <strong>Image sourcing for Carbon/Watson:</strong> Carbon is open source (Apache 2.0), so all assets are freely usable:
+        <ul style="margin-top:12px;">
+            <li>Carbon dashboards: <a href="https://v10.carbondesignsystem.com/data-visualization/dashboards/" style="color:#4af">carbondesignsystem.com/data-visualization/dashboards</a></li>
+            <li>Carbon component library: <a href="https://carbondesignsystem.com/" style="color:#4af">carbondesignsystem.com</a></li>
+            <li>Carbon for AI guidelines: <a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/" style="color:#4af">carbondesignsystem.com/guidelines/carbon-for-ai</a></li>
+            <li>Figma community file: <a href="https://www.figma.com/community/file/1157761560874207208/v11-carbon-design-system" style="color:#4af">Carbon Design System v11 Figma</a></li>
+            <li>Peter Garvin's Behance showcase: <a href="https://www.behance.net/gallery/139162343/Carbon-Design-System" style="color:#4af">behance.net/gallery/139162343</a></li>
+            <li>Carbon dashboard mockup: <a href="https://moqups.com/templates/wireframes-mockups/admin-dashboards/carbon-design-dashboard/" style="color:#4af">Moqups Carbon template</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SOURCING GUIDE -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="case-study" id="sourcing">
+    <div class="cs-number">Reference</div>
+    <h2>Image Sourcing Guide</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>What's Available</th>
+                <th>License</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Your own org screenshots</strong></td>
+                <td>Best option. Authentic product UI from Salesforce, MuleSoft, Watson</td>
+                <td>Your own work</td>
+            </tr>
+            <tr>
+                <td><strong>Salesforce Admin Blog</strong></td>
+                <td>All Flow Builder screenshots above (hosted on CloudFront)</td>
+                <td>Publicly published editorial content</td>
+            </tr>
+            <tr>
+                <td><strong>Carbon Design System</strong></td>
+                <td>Components, dashboards, data viz, Carbon for AI</td>
+                <td>Apache 2.0 (open source)</td>
+            </tr>
+            <tr>
+                <td><strong>MuleSoft Documentation</strong></td>
+                <td>UI guides, platform screenshots</td>
+                <td>Publicly available documentation</td>
+            </tr>
+            <tr>
+                <td><strong>Salesforce Press Kit</strong></td>
+                <td>High-res product imagery</td>
+                <td>Contact <code>pr@salesforce.com</code></td>
+            </tr>
+            <tr>
+                <td><strong>Unsplash</strong></td>
+                <td>Atmosphere/concept images</td>
+                <td>Free, no attribution required</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Image Treatment Tips</h3>
+    <ul>
+        <li>Apply a consistent color overlay or filter to unify screenshots from different sources</li>
+        <li>Use device mockups (laptop/tablet frames) to make raw screenshots feel more polished</li>
+        <li>For concept images, abstract/geometric visuals align with your site's minimal aesthetic better than stock photography</li>
+        <li>Your Framer template expects: 1 hero (16:9 landscape) + 4-6 detail images (mix of full-width and 2-column grid)</li>
+    </ul>
+</div>
+
+<footer style="text-align:center; padding:40px 0; color:#444; font-size:12px; border-top:1px solid #1a1a1a; margin-top:40px;">
+    Content guide for Daniel Clark &middot; Generated July 2026
+</footer>
+
+</div>
+</body>
+</html>
