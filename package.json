@@ -1,0 +1,26 @@
+{
+  "name": "case-studies-site",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NETWORK101/case-studies-content.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NETWORK101/case-studies-content/issues"
+  },
+  "homepage": "https://github.com/NETWORK101/case-studies-content#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "framer-api": "^0.1.24",
+    "tsx": "^4.23.1"
+  }
+}
